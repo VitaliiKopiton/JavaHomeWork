@@ -23,25 +23,32 @@ public class Calculator {
         System.out.print("Введите математическое действие которое хотите сделать с числами +, -, /, * : ");
         sign = a.next();
 
-        // System.out.println(operand1 + operand2);
-
         if (operand2 == 0 && sign.equals ("/")) {
         System.out.println("Деление на ноль невозможно !!!");
         }
         else {
-            if (sign.equals ("+")){
-                System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1+operand2));
-            }
-            if (sign.equals ("-")){
-                System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1-operand2));
-            }
-            if (sign.equals ("*")){
-                System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1*operand2));
-            }
-            if (sign.equals ("/")){
-                System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1/operand2));
+
+            switch (sign) {
+                case "+":
+                    System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1 + operand2));
+                    break;
+
+                case "-":
+                    System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1 - operand2));
+                    break;
+
+                case "*":
+                    System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1 * operand2));
+                    break;
+
+                case "/":
+                    System.out.println("Результат " + (operand1) + (sign) + (operand2) + ("=") + (operand1 / operand2));
+                    break;
+                default:
+                    System.out.println("Mатематическое действие указано не верно");
             }
         }
+
     }
 
 }
