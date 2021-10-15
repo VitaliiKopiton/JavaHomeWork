@@ -7,7 +7,7 @@ public class Interval {
         Scanner a = new Scanner(System.in);
         System.out.print("Введите целое цисло: ");
         int b = a.nextInt();
-        if (b<15){
+        if (b>=0 && b<15){
             System.out.print("Значение относится к промежутку [0-14]");
             }
         else {
@@ -20,7 +20,7 @@ public class Interval {
             if (b>50 && b<101) {
                 System.out.print("Значение относится к промежутку [51-100]");
                 }
-            if (b>100) {
+            if (b>100 || b<0) {
                 System.out.print("Введенное число не попадает не в один из имеющихся промежутков");
                 }
             }
