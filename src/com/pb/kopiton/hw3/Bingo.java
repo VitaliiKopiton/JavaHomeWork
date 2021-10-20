@@ -16,26 +16,33 @@ public class Bingo {
         if (go.equals ("Y") || go.equals("y")) {
 
             int random = (int) (Math.random()*100);
+            int number;
 
-            Scanner a = new Scanner(System.in);
-            System.out.println("Угадай число от 0 до 100: ");
-            int number = a.nextInt();
+            int counter = 0;
 
-            if (number == random) {
-                System.out.print ("Вы выйграли :)");
-            }
+            do {
+                counter ++;
 
-            else {
-                System.out.println("Вы не угадали :(");
-                System.out.println("Загаданное число " + random);
-                if (random>number) {
-                    System.out.print("Загаданное число > чем " + number);
+
+                Scanner a = new Scanner(System.in);
+                System.out.println("Попытка " + counter + " Угадай число от 0 до 100: ");
+                number = a.nextInt();
+
+                if (number == random) {
+                    System.out.print("Вы угадали с " + counter + " попытки :)");
+                } else {
+                    System.out.println("Вы не угадали :(");
+                    System.out.println("Загаданное число " + random);
+                    if (random > number) {
+                        System.out.println("Загаданное число > чем " + number);
+                    }
+                    if (random < number) {
+                        System.out.println("Загаданое число < чем " + number);
+                    }
+                    // do while loop
                 }
-                if (random<number) {
-                    System.out.println("Загаданое число < чем " + number);
-                }
-                // do while loop
             }
+            while (random != number);
 
 
 
