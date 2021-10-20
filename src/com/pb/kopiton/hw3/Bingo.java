@@ -34,7 +34,7 @@ public class Bingo {
                 if (random<number) {
                     System.out.println("Загаданое число < чем " + number);
                 }
-                // с
+                // do while loop
             }
 
 
