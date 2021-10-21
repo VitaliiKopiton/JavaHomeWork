@@ -8,24 +8,25 @@ import java.util.Scanner;
 public class Bingo {
     public static void main(String[] args) {
 
-        Scanner end = new Scanner(System.in);
-        System.out.println("Start Game");
-        System.out.println("Хотите продолжить? Если да, укажите  Y : ");
-        String go = end.next();
+        int random = (int) (Math.random()*100);
+        int counter = 0;
+        int number;
 
-        if (go.equals ("Y") || go.equals("y")) {
+        do {
+            counter ++;
+            //int number1;
 
-            int random = (int) (Math.random()*100);
-            int number;
+            Scanner end = new Scanner(System.in);
+            System.out.println("Start Game");
+            System.out.println("Хотите продолжить? Если да, укажите  Y : ");
+            String go = end.next();
 
-            int counter = 0;
+            if (go.equals ("Y") || go.equals("y")) {
 
-            do {
-                counter ++;
-
+                 //int number1;
 
                 Scanner a = new Scanner(System.in);
-                System.out.println("Попытка " + counter + " Угадай число от 0 до 100: ");
+                System.out.println("Попытка " + counter + ". Угадай число от 0 до 100: ");
                 number = a.nextInt();
 
                 if (number == random) {
@@ -39,21 +40,15 @@ public class Bingo {
                     if (random < number) {
                         System.out.println("Загаданое число < чем " + number);
                     }
-                    // do while loop
+
                 }
+
+            }  //if
+            else {
+                System.out.println("Game Over");
             }
-            while (random != number);
 
-
-
-        }
-
-
-
-        else {
-            System.out.println("Game Over");
-        }
-
+        }  //do
+        while (number != random);
     }
-
 }
