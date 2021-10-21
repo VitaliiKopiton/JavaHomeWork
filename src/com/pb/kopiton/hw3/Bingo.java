@@ -11,7 +11,7 @@ public class Bingo {
         System.out.println("Start Game");
 
         int random = (int) (Math.random()*100);
-        int number;       // если просто создать переменную, то ошибка, почему ?
+        int number;
         int counter = 0;
 
         do {
