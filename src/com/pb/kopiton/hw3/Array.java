@@ -36,18 +36,35 @@ public class Array {
                 sumArray = sumArray + array[i];
             }
         }
-        System.out.print("Сумма положительных элементов массива: " + sumArray );
+        System.out.println("Сумма положительных элементов массива: " + sumArray );
 
 
 
-//        while (!isSorted) {
-//
-//        }
+        while (!isSorted) {               // не понятно
+            isSorted = true;              // выход если isSorted = true
+            for (int i=0; i<9; i++) {
+                if (array[i]>array[i+1]) {
+                    isSorted = false;
+                    buf = array[i];
+                    array[i] = array[i+1];
+                    array[i+1] = buf;
 
+                }
 
+            }
 
+        }
 
-
+        System.out.print("Массив после сортировки: [" + array[0] + ", ");
+        System.out.print(array[1] + ", ");
+        System.out.print(array[2] + ", ");
+        System.out.print(array[3] + ", ");
+        System.out.print(array[4] + ", ");
+        System.out.print(array[5] + ", ");
+        System.out.print(array[6] + ", ");
+        System.out.print(array[7] + ", ");
+        System.out.print(array[8] + ", ");
+        System.out.println(array[9] + "]");
     }
 
 }
