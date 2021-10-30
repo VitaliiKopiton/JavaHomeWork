@@ -12,6 +12,9 @@ public class Anagram {
         for (int i=0; i < text.length(); i++) {
             if (text.substring(i, i + 1).matches("[a-zа-я]")) {
                 textOut[i] = text.substring(i, i + 1);
+            }
+            else {
+                textOut[i] = "null";
 
             }
         }
@@ -22,6 +25,14 @@ public class Anagram {
         return str;
 
     }
+
+
+
+//    static String kill (String text) {
+//        for (int i=0; i<text.length(); i++) {
+//            if (text(i) = null)
+//        }
+//    }
 
 
 
