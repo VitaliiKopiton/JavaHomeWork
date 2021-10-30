@@ -19,14 +19,11 @@ public class Anagram {
             }
         }
 
-        Arrays.sort(kill(textOut));
+        Arrays.sort(textOut);
 
-        String str = Arrays.toString(textOut);
-      //  String str1 = kill(str);
+        String str = Arrays.toString(kill(textOut));
         return str;
-
     }
-
 
 
     static String [] kill (String [] text) {
@@ -41,9 +38,7 @@ public class Anagram {
     }
 
 
-
     public static void main(String[] args) {
-
 
         Scanner scanner = new Scanner(System.in);
 
@@ -55,7 +50,6 @@ public class Anagram {
 
          String text1Lower = inText1.toLowerCase();
          String text2Lower = inText2.toLowerCase();
-
 
 
         if (Anag(text1Lower).equals(Anag(text2Lower))) {
