@@ -19,20 +19,26 @@ public class Anagram {
             }
         }
 
-        Arrays.sort(textOut);
+        Arrays.sort(kill(textOut));
 
         String str = Arrays.toString(textOut);
+      //  String str1 = kill(str);
         return str;
 
     }
 
 
 
-//    static String kill (String text) {
-//        for (int i=0; i<text.length(); i++) {
-//            if (text(i) = null)
-//        }
-//    }
+    static String [] kill (String [] text) {
+        String outText = "";
+        for (int i=0; i<text.length; i++) {
+            if (text[i] != "null") {
+                outText += text[i];
+            }
+        }
+        String outText1 [] = outText.split("");
+        return outText1;
+    }
 
 
 
