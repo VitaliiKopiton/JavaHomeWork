@@ -30,20 +30,20 @@ public class Library {
 
 
 
-        Book book1 = new Book();
-        book1.nameBook = "Java";
-        book1.autherBook = "Кей Хорстманн";
-        book1.yearBook = 2014;
+        Book book1 = new Book("Java", "Кей Хорстманн", 2014);
+//        book1.nameBook = "Java";
+//        book1.autherBook = "Кей Хорстманн";
+//        book1.yearBook = 2014;
 
-        Book book2 = new Book();
-        book2.nameBook = "Руководство астронавта по жизни на Земле";
-        book2.autherBook = "Кристофер Хэдфилд";
-        book2.yearBook = 2015;
-
-        Book book3 = new Book();
-        book3.nameBook = "Богатый Папа, Бедный Папа";
-        book3.autherBook = "Роберт Кійосакі і Шерон Лехтер";
-        book3.yearBook = 1997;
+        Book book2 = new Book("Руководство астронавта по жизни на Земле", "Кристофер Хэдфилд", 2015);
+//        book2.nameBook = "Руководство астронавта по жизни на Земле";
+//        book2.autherBook = "Кристофер Хэдфилд";
+//        book2.yearBook = 2015;
+//
+        Book book3 = new Book("Богатый Папа, Бедный Папа", "Роберт Кійосакі і Шерон Лехтер", 1997);
+//        book3.nameBook = "Богатый Папа, Бедный Папа";
+//        book3.autherBook = "Роберт Кійосакі і Шерон Лехтер";
+//        book3.yearBook = 1997;
 
         int borrowedBooks = 5;
 
@@ -54,14 +54,16 @@ public class Library {
         System.out.println(reader);
 
         System.out.println(reader.takeBook(borrowedBooks));
-        System.out.println(reader.takeBook(reader.getName(), borrowedBooks, book1.nameBook));
-        System.out.println(reader.takeBook(reader.getName(), borrowedBooks, book1.nameBook, book1.getAutherBook(), book1.yearBook));
+        System.out.println(reader.takeBook(reader.getName(), borrowedBooks, book1.getNameBook()));
+        System.out.println(reader.takeBook(reader.getName(), borrowedBooks, book1.getNameBook(), book1.getAutherBook(), book1.getYearBook()));
 
         System.out.println(reader.returnBook(borrowedBooks));
-        System.out.println(reader.returnBook(reader.getName(), borrowedBooks, book1.nameBook));
-        System.out.println(reader.returnBook(reader.getName(), borrowedBooks, book1.nameBook, book1.getAutherBook(), book1.yearBook));
+        System.out.println(reader.returnBook(reader.getName(), borrowedBooks, book1.getNameBook()));
+        System.out.println(reader.returnBook(reader.getName(), borrowedBooks, book1.getNameBook(), book1.getAutherBook(), book1.getYearBook()));
 
-        System.out.println(borrowedBooks);
+//        System.out.println(book1.getNameBook() + " " + book2.getNameBook());
+        System.out.println( book1.Books() + " " + book2.Books() + " " + book3.Books());
+
 
 
 
