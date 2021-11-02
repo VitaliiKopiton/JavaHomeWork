@@ -8,10 +8,6 @@ package com.pb.kopiton.hw5;
     private int phone;
 
 
-//    public Reader () {
-//
-//    }
-
 
 
      public String getName() {

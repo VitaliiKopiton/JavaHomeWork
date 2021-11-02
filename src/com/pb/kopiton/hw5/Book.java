@@ -42,9 +42,7 @@ package com.pb.kopiton.hw5;
 //         this.yearBook = yearBook;
 //     }
 
-//     public  Books () {
-//         return nameBook;
-//     }
+
 
      public String Books () {
 
