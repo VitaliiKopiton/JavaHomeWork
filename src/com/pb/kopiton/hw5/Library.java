@@ -63,6 +63,7 @@ public class Library {
 
 //        System.out.println(book1.getNameBook() + " " + book2.getNameBook());
         System.out.println( book1.Books() + " " + book2.Books() + " " + book3.Books());
+        System.out.println(reader1.getName() + " " + reader2.getName() + " " + reader3.getName() + " " + reader.getName());
 
 
 
