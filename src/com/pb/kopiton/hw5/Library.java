@@ -31,19 +31,12 @@ public class Library {
 
 
         Book book1 = new Book("Java", "Кей Хорстманн", 2014);
-//        book1.nameBook = "Java";
-//        book1.autherBook = "Кей Хорстманн";
-//        book1.yearBook = 2014;
+
 
         Book book2 = new Book("Руководство астронавта по жизни на Земле", "Кристофер Хэдфилд", 2015);
-//        book2.nameBook = "Руководство астронавта по жизни на Земле";
-//        book2.autherBook = "Кристофер Хэдфилд";
-//        book2.yearBook = 2015;
-//
+
         Book book3 = new Book("Богатый Папа, Бедный Папа", "Роберт Кійосакі і Шерон Лехтер", 1997);
-//        book3.nameBook = "Богатый Папа, Бедный Папа";
-//        book3.autherBook = "Роберт Кійосакі і Шерон Лехтер";
-//        book3.yearBook = 1997;
+
 
         int borrowedBooks = 5;
 
