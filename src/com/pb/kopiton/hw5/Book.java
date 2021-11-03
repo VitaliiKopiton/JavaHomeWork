@@ -6,6 +6,7 @@ package com.pb.kopiton.hw5;
      private String nameBook;
      private String autherBook;
      private int yearBook;
+     //String [] readBooks;
 
 
      public Book (String nameBook, String autherBook, int yearBook) {    // Конструктор

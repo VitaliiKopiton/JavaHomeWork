@@ -47,12 +47,12 @@ public class Library {
         System.out.println(reader);
 
         System.out.println(reader.takeBook(borrowedBooks));
-        System.out.println(reader.takeBook(reader.getName(), borrowedBooks, book1.getNameBook()));
-        System.out.println(reader.takeBook(reader.getName(), borrowedBooks, book1.getNameBook(), book1.getAutherBook(), book1.getYearBook()));
+        System.out.println(reader.takeBook(reader.getName(), book1.getNameBook(), book2.getNameBook()));
+        System.out.println(reader.takeBook(reader.getName(), book1.getNameBook(), book1.getAutherBook(), book1.getYearBook()));
 
         System.out.println(reader.returnBook(borrowedBooks));
-        System.out.println(reader.returnBook(reader.getName(), borrowedBooks, book1.getNameBook()));
-        System.out.println(reader.returnBook(reader.getName(), borrowedBooks, book1.getNameBook(), book1.getAutherBook(), book1.getYearBook()));
+        System.out.println(reader.returnBook(reader.getName(), book1.getNameBook()));
+        System.out.println(reader.returnBook(reader.getName(), book1.getNameBook(), book1.getAutherBook(), book1.getYearBook()));
 
 //        System.out.println(book1.getNameBook() + " " + book2.getNameBook());
         System.out.println( book1.Books() + " " + book2.Books() + " " + book3.Books());

@@ -58,11 +58,18 @@ package com.pb.kopiton.hw5;
     }
 
 
-    String takeBook(String name, int borrowedBooks, String... nameBook) {
-        return name + " взял книги: " + nameBook ;
+    String takeBook(String name, String... nameBook) {
+        String readBooks = new String();
+         for (int i=0; i< nameBook.length; i++) {
+             if (nameBook[i] != null ) {
+                 readBooks += nameBook[i] + ", ";
+             }
+         }
+        return name + " взял книги: " + readBooks + "." ;
     }
 
-    String takeBook(String name, int borrowedBooks, String nameBook, String auther, int year) {
+
+    String takeBook(String name, String nameBook, String auther, int year) {
          return name + " взял книги: " + nameBook + " (" + auther + ", " +  year +")";
      }
 
@@ -73,11 +80,11 @@ package com.pb.kopiton.hw5;
          return name + " вернул " + borrowedBooks + " книги";
      }
 
-     String returnBook (String name, int borrowedBooks, String nameBook) {
+     String returnBook (String name, String nameBook) {
          return name + " вернул: " + nameBook ;
      }
 
-     String returnBook (String name, int borrowedBooks, String nameBook, String auther, int year) {
+     String returnBook (String name, String nameBook, String auther, int year) {
          return name + " вернул книги: " + nameBook + " (" + auther + ", " +  year +")";
      }
 
