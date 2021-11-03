@@ -58,7 +58,7 @@ package com.pb.kopiton.hw5;
     }
 
 
-    String takeBook(String name, int borrowedBooks, String nameBook) {
+    String takeBook(String name, int borrowedBooks, String... nameBook) {
         return name + " взял книги: " + nameBook ;
     }
 
@@ -80,6 +80,8 @@ package com.pb.kopiton.hw5;
      String returnBook (String name, int borrowedBooks, String nameBook, String auther, int year) {
          return name + " вернул книги: " + nameBook + " (" + auther + ", " +  year +")";
      }
+
+
 
 
 

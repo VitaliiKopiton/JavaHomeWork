@@ -8,7 +8,7 @@ package com.pb.kopiton.hw5;
      private int yearBook;
 
 
-     public Book (String nameBook, String autherBook, int yearBook) {
+     public Book (String nameBook, String autherBook, int yearBook) {    // Конструктор
          this.nameBook = nameBook;
          this.autherBook = autherBook;
          this.yearBook = yearBook;
