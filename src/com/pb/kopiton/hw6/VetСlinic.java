@@ -41,9 +41,20 @@ public class VetСlinic {
         dog.eat();
 
 
-        veterinarian.treatAnimal(dog);
-        veterinarian.treatAnimal(cat);
-        veterinarian.treatAnimal(horse);
+//        veterinarian.treatAnimal(dog);
+//        veterinarian.treatAnimal(cat);
+//        veterinarian.treatAnimal(horse);
+
+        Animal [] allAnimals = new Animal [3];
+        allAnimals [0] = dog;
+        allAnimals [1] = cat;
+        allAnimals [2] = horse;
+
+        for (int i=0; i < allAnimals.length; i ++) {
+            veterinarian.treatAnimal(allAnimals[i]);
+        }
+        System.out.println("Пациентов нет");
+//        veterinarian.treatAnimal(allAnimals[0]);
 
 
 
