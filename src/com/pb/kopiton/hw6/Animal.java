@@ -5,6 +5,8 @@ public class Animal {
     private String name;
     private String food;
     private String location;
+    private int age;
+
 
     public String getName() {
         return name;
@@ -31,12 +33,20 @@ public class Animal {
         this.location = location;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public void makeNoise () {
         System.out.println(name + " Шумит");
     }
 
     public void eat () {
-        System.out.println("Ест");
+        System.out.println(name + " eст " + food);
 
     }
 
