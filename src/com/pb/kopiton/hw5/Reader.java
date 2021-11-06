@@ -1,14 +1,16 @@
 package com.pb.kopiton.hw5;
 
- class Reader {
-    private String name;
-    private int libraryCard;
-    private String faculty;
-    private String dob;
-    private int phone;
+import java.util.Arrays;
 
+class Reader {
 
+     // public static int borrowedBooks = 0;
 
+     private String name;
+     private int libraryCard;
+     private String faculty;
+     private String dob;
+     private int phone;
 
      public String getName() {
          return name;
@@ -52,45 +54,118 @@ package com.pb.kopiton.hw5;
 
 
 
-
-     String takeBook(int borrowedBooks) {
-        return name + " взял " + borrowedBooks + " книги";
+     public void takeBook(int bookCount) {
+         bookCount ++;
+         System.out.println(name+ " взял " + bookCount +" книг");
     }
 
 
-    String takeBook(String name, String... nameBook) {
+    public void takeBook (String... nameBook) {
         String readBooks = new String();
          for (int i=0; i< nameBook.length; i++) {
              if (nameBook[i] != null ) {
-                 readBooks += nameBook[i] + ", ";
+                 readBooks += nameBook[i] + " ";
              }
-         }
-        return name + " взял книги: " + readBooks + "." ;
+         } System.out.println( name + " взял книги: " + readBooks + "." );
     }
 
 
-    String takeBook(String name, String nameBook, String auther, int year) {
-         return name + " взял книги: " + nameBook + " (" + auther + ", " +  year +")";
-     }
+
+    public void takeBook(Book... book) {
+        String readBooks = new String();
+        for (int i=0; i< book.length; i++) {
+            if (book[i] != null ) {
+                readBooks += book[i] + " ";
+            }
+        } System.out.println( name + " взял книги: " + readBooks + "." );
+
+    }
+
+
+
+    public void returnBook(int bookCount) {
+        bookCount ++;
+        System.out.println(name+ " вернул " + bookCount +" книг");
+    }
+
+
+    public void returnBook (String... nameBook) {
+        String readBooks = new String();
+        for (int i=0; i< nameBook.length; i++) {
+            if (nameBook[i] != null ) {
+                readBooks += nameBook[i] + " ";
+            }
+        } System.out.println( name + " вернул: " + readBooks + "." );
+    }
+
+
+
+    public void returnBook(Book... book) {
+        String readBooks = new String();
+        for (int i=0; i< book.length; i++) {
+            if (book[i] != null ) {
+                readBooks += book[i] + " ";
+            }
+        } System.out.println( name + " вернул: " + readBooks + "." );
+
+    }
 
 
 
 
-     String returnBook (int borrowedBooks) {
-         return name + " вернул " + borrowedBooks + " книги";
-     }
+//    public void takeBook(Book... book) {
+//         String arrayBooks = new String();
+//       //  arrayBooks = book[1];
+//
+//         //System.out.println(NameArray());
+//         System.out.println(book.toString());
+//         System.out.println(Arrays.toString(book));
+//         System.out.println(Arrays.deepToString(book));
+//         Arrays.asList(book).stream().forEach(s -> System.out.println(s));
+//     }
 
-     String returnBook (String name, String nameBook) {
-         return name + " вернул: " + nameBook ;
-     }
+    public class NameArray {
 
-     String returnBook (String name, String nameBook, String auther, int year) {
-         return name + " вернул книги: " + nameBook + " (" + auther + ", " +  year +")";
-     }
+        private String nameArray;
+
+        @Override
+        public String toString() {
+            return nameArray;
+        }
+    }
+
+
+
+//
+//     String takeBook(String name, String nameBook, String auther, int year) {
+//         return name + " взял книги: " + nameBook + " (" + auther + ", " +  year +")";
+//     }
+
+
+//    String takeBook (String... nameBook) {
+//         String allBooks = new String();
+//         for (int i=0; i < nameBook.length; i++) {
+//             if (nameBook[i] != null) {
+//                 allBooks += nameBook[i] ;
+//             }
+//         }
+//         return  allBooks ;
+//     }
 
 
 
 
+//     String returnBook (int borrowedBooks) {
+//         return name + " вернул " + borrowedBooks + " книги";
+//     }
+//
+//     String returnBook (String name, String nameBook) {
+//         return name + " вернул: " + nameBook ;
+//     }
+//
+//     String returnBook (String name, String nameBook, String auther, int year) {
+//         return name + " вернул книги: " + nameBook + " (" + auther + ", " +  year +")";
+//     }
 
 
 
