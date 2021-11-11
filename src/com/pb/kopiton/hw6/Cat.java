@@ -1,5 +1,7 @@
 package com.pb.kopiton.hw6;
 
+import java.util.Objects;
+
 public class Cat extends Animal {
 
     private int catchMouse;
@@ -28,19 +30,26 @@ public class Cat extends Animal {
     }
 
     @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
     public String toString() {
         return "Cat{" +
-                "catchMouse=" + catchMouse +
+                "name='" + name + '\'' +
+                ", food='" + food + '\'' +
+                ", location='" + location + '\'' +
+                ", age=" + age +
+                ", catchMouse=" + catchMouse +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cat cat = (Cat) o;
+        return catchMouse == cat.catchMouse;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(catchMouse);
     }
 }

@@ -3,10 +3,10 @@ package com.pb.kopiton.hw6;
 public class Animal {
 
     String [] allAnimal;
-    private String name;
-    private String food;
-    private String location;
-    private int age;
+    protected String name;
+    protected String food;
+    protected String location;
+    protected int age;
 
 
     public String getName() {

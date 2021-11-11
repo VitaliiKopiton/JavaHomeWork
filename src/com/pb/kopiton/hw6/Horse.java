@@ -1,5 +1,7 @@
 package com.pb.kopiton.hw6;
 
+import java.util.Objects;
+
 public class Horse extends Animal {
 
     public int kickedHoof;
@@ -28,19 +30,26 @@ public class Horse extends Animal {
     }
 
     @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    @Override
     public String toString() {
         return "Horse{" +
-                "kickedHoof=" + kickedHoof +
+                "name='" + name + '\'' +
+                ", food='" + food + '\'' +
+                ", location='" + location + '\'' +
+                ", age=" + age +
+                ", kickedHoof=" + kickedHoof +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Horse horse = (Horse) o;
+        return kickedHoof == horse.kickedHoof;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(kickedHoof);
     }
 }
