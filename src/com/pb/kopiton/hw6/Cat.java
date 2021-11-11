@@ -39,6 +39,8 @@ public class Cat extends Animal {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Cat{" +
+                "catchMouse=" + catchMouse +
+                '}';
     }
 }

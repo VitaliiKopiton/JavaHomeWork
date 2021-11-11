@@ -49,6 +49,8 @@ public class Library {
         reader0.returnBook(book1.getNameBook(), "и", book2.getNameBook());
         reader0.returnBook(book1.allBooks(), book2.allBooks(), book3.allBooks());
 
+        
+
 
 
 
