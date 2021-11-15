@@ -6,4 +6,16 @@ public enum Size {
       S ("s"),
       M ("m"),
       L ("l");
+
+    public Enum (String description, String euroSize ) {
+
+    }
+
+    public getDescription() {
+
+    }
+
+    public getEuroSize() {
+
+    }
 }
