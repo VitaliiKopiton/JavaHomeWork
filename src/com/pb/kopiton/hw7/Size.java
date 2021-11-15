@@ -1,7 +1,9 @@
 package com.pb.kopiton.hw7;
 
 public enum Size {
-    XXS;
-//    XS; S;
-//    M; L;
+    XXS ("xxs"),
+     XS ("xs"),
+      S ("s"),
+      M ("m"),
+      L ("l");
 }
