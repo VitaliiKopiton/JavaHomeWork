@@ -1,4 +1,4 @@
 package com.pb.kopiton.hw7;
 
-public class Tie extends Clothes{
+public class Tie extends Clothes implements ManClothes{
 }
