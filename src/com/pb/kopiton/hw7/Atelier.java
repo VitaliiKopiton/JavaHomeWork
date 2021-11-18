@@ -20,7 +20,6 @@ public class Atelier {
         dressWomen(clothes);
     }
 
-    //-------------------------------- methods ---------------------------
 
     private static void dressMan(Clothes[] clothes) {
         for(Clothes c: clothes) {
