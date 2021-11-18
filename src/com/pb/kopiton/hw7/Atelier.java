@@ -13,15 +13,35 @@ public class Atelier {
 
         };
 
+        dressMan(clothes);
 
+        System.out.println();
 
-        public static dressMan(Clothes[] clothes) {
-
-        }
-
-        static dressWomen(Clothes[] clothes) {
-
-        }
-
+        dressWomen(clothes);
     }
+
+    //-------------------------------- methods ---------------------------
+
+    private static void dressMan(Clothes[] clothes) {
+        for(Clothes c: clothes) {
+            if (c instanceof ManClothes) {
+                ((ManClothes) c).dressMan();
+            }
+        }
+    }
+
+    private static void dressWomen(Clothes[] clothes) {
+        for(Clothes c: clothes) {
+            if (c instanceof WomenClothes) {
+                ((WomenClothes) c).dressWomen();
+            }
+        }
+    }
+
+
+
+
+
+
+
 }

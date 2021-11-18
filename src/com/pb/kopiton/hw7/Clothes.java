@@ -19,7 +19,7 @@ public class Clothes {
         return price;
     }
 
-    public Colour getColour() {
+    public String getColour() {
         return colour;
 
     }

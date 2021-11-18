@@ -12,13 +12,13 @@ public enum Size {
 
 
 
-    public Size (String description,  int euroSize ) {
+    Size (String description,  int euroSize ) {
         this.description = description;
         this.euroSize = euroSize;
 
     }
 
-    public Size (int euroSize) {
+    Size (int euroSize) {
         this.euroSize = euroSize;
     }
 
