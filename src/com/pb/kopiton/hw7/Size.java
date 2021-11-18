@@ -1,47 +1,25 @@
 package com.pb.kopiton.hw7;
 
 public enum Size {
-    XXS ("xxs"),
-     XS ("xs"),
-      S ("s"),
-      M ("m"),
-      L ("l");
+    XXS ("Детский размер", 32),
+     XS ("Взрослый размер", 34),
+      S ("Взрослый размер", 36),
+      M ("Взрослый размер", 38),
+      L ("Взрослый размер", 40);
 
-    public Enum (String description, String euroSize ) {
-        description = description;
-        euroSize = euroSize
+    private int euroSize;
+    private String description;
 
-    }
 
-    public getDescription() {
-            if (euroSize equals ('xxs') || euroSize equals ('XXS')) {
-                return 'Детский размер';
-                elso {}
 
-            }
+    public Size (String description,  int euroSize ) {
+        this.description = description;
+        this.euroSize = euroSize;
 
     }
 
-    public int getEuroSize() {
-        switch (euroSize) {
-            case 'xxs':
-                return 32;
-                break;
-            case 'xs':
-                return 34;
-                break;
-            case 's':
-                return 36;
-                break;
-            case 'm':
-                return 38;
-                break;
-            case 'l':
-                return 40;
-                break;
-        }
-        default:
-        System.out.println(euroSize + " - размер указан не верно");
+    public Size (int euroSize) {
+        this.euroSize = euroSize;
     }
 
 }
