@@ -23,8 +23,8 @@ public class Clothes {
         return colour;
 
     }
-//    public String getInfo() {
-//        return "размер" + size.name() + " " + size.getEuroSize() + " " + size.getDescription() + " цвет " + colour + " цена " + price;
-//    }
+    public String getInfo() {
+        return "размер" + size.name() + " " + size.getEuroSize() + " " + size.getDescription() + " цвет " + colour + " цена " + price;
+    }
 
 }

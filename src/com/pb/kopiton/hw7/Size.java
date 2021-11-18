@@ -22,4 +22,11 @@ public enum Size {
         this.euroSize = euroSize;
     }
 
+    public int getEuroSize() {
+        return euroSize;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }
