@@ -12,12 +12,12 @@ public class Auth {
         this.password = password;
     }
 
-    public void signUp (String login, String password, String confirmPassword) {
+    public static void signUp (String login, String password, String confirmPassword) {
         try {
 
-        } catch (WrongLoginException) {
+        } catch (WrongLoginException e) {
             System.out.println(login + " логин указан не верно. Попробуйте снова");
-        } catch (WrongPasswordException) {
+        } catch (WrongPasswordException e) {
             System.out.println(" пароль 1 и пароль 2 указаны не верно. Попробуйте снова");
         }
 
@@ -26,10 +26,10 @@ public class Auth {
 
     }
 
-    void signIn (String login, String password) {
+    public static void signIn (String login, String password) {
         try {
 
-        } catch (WrongLoginException) {
+        } catch (WrongLoginException e) {
 
         }
 
