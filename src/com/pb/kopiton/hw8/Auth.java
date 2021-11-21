@@ -1,16 +1,24 @@
 package com.pb.kopiton.hw8;
 
-public class Auth {
+public class  Auth {
 
-    private String login;
-    private String password;
-    private String  confirmPassword;
-    private String msg;
+    private static String login;
+    private static String password;
+    //private String  confirmPassword;
+    //private String msg;
 
 
     public Auth(String login, String password) {
         this.login = login;
         this.password = password;
+    }
+
+    public static String getLogin() {
+        return login;
+    }
+
+    public static String getPassword() {
+        return password;
     }
 
     public static void signUp (String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
@@ -34,6 +42,21 @@ public class Auth {
 
             System.out.println("Пользователь " + login + " успешно зарегистрирован на сайте");
 
+            Auth auth = new Auth (login,password);
+    }
+
+
+    public static void signIn (String login1, String password1) throws WrongLoginException {
+
+        if(login1.equals(getLogin()) && password1.equals(getPassword())){       // подставить текущее значение
+            //System.out.println(login + " логин введен правильно");
+        }
+        else{
+            WrongLoginException ex = new WrongLoginException("Log Error");
+            throw ex;
+        }
+
+        System.out.println("Пользователь " +  " успешно авторизован");
     }
 
 }
