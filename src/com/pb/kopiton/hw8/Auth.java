@@ -24,7 +24,7 @@ public class Auth {
                 throw ex;
             }
 
-            if (password.equals(confirmPassword) && password.matches("[a-zA-Z0-9]{5,200}")) {
+            if (password.equals(confirmPassword) && password.matches("[a-zA-Z0-9_]{5,200}")) {
                 System.out.println("пароль OK");
             }
             else {

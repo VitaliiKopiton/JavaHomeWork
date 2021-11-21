@@ -6,8 +6,8 @@ public class OnlineShop {
         try {
 
             String login = "QQqda1";
-            String passvord = "qwert";
-            String confirmPassword = "qwert";
+            String passvord = "qwert_";
+            String confirmPassword = "qwert_";
             String msg = "dsfdsfsdfsdf";
 
             Auth.signUp (login,passvord, confirmPassword);
