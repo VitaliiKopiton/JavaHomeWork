@@ -7,7 +7,7 @@ public class OnlineShop {
 
             String login = "QQqda1";
             String passvord = "qwert";
-            String confirmPassword = "qwert-";
+            String confirmPassword = "qwert";
             String msg = "dsfdsfsdfsdf";
 
             Auth.signUp (login,passvord, confirmPassword);
@@ -16,12 +16,5 @@ public class OnlineShop {
         } catch (WrongPasswordException ex) {
             System.out.println(" пароль 1 и пароль 2 указаны не верно. Попробуйте снова");
         }
-
-        //System.out.println("Пользователь " + " успешно зарегистрирован на сайте");
-
-        //Auth (login,passvord);
-        //Auth.signUp (login,passvord, confirmPassword);
-
-
     }
 }

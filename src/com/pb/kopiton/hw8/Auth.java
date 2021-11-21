@@ -14,7 +14,6 @@ public class Auth {
     }
 
     public static void signUp (String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
-      //  public static void signUp (String login, String password, String confirmPassword)  {
 
 
             if(login.matches("[a-zA-Z0-9]{5,20}")){
@@ -33,35 +32,8 @@ public class Auth {
                 throw ex;
             }
 
-
-
-
-
-//        try {
-//            int arry [] = new int[2];
-//            System.out.println("dfsfds" + arry[3]);
-//
-//        }   catch (WrongLoginException ex) {
-//            System.out.println(login + " логин указан не верно. Попробуйте снова");
-//        } catch (WrongPasswordException ex) {
-//            System.out.println(" пароль 1 и пароль 2 указаны не верно. Попробуйте снова");
-//        }
-//
-//        System.out.println("Пользователь " + login + " успешно зарегистрирован на сайте");
-
+            System.out.println("Пользователь " + login + " успешно зарегистрирован на сайте");
 
     }
-
-    //public static void signIn (String login, String password) {
-//        try {
-//
-//        } catch (WrongLoginException e) {
-//
-//        }
-//
-//        System.out.println("Логин и пароль верный");
-
-    //}
-
 
 }
